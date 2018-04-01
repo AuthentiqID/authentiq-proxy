@@ -1,0 +1,8 @@
+FROM openresty/openresty:stretch
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get -qy update && \
+    apt-get -qy install git libssl1.0-dev luarocks && \
+    luarocks install lua-resty-openidc
+

@@ -1,0 +1,32 @@
+version: "3"
+services:
+
+  proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile-proxy
+    ports:
+      - 80:80
+    networks:
+      - network
+    depends_on:
+      - jenkins
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d:ro
+
+  jenkins:
+    build:
+      context: .
+      dockerfile: Dockerfile-jenkins
+    ports:
+      - 8080:8080
+    volumes:
+      - jenkins:/var/jenkins_home
+    networks:
+      - network
+
+networks:
+  network:
+
+volumes:
+  jenkins:
