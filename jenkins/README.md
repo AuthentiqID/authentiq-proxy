@@ -11,7 +11,7 @@ Read the follow-up to understand how to configure the (included) [Reverse Proxy 
 
 # Quickstart
 
-1. Sign in to the [Authentiq Dashboard](https://dashoard.authentiq.com/?utm_source=github&utm_medium=readme&utm_campaign=authentiq-proxy-jenkins) to create a new client for you Jenkins server.
+1. Sign in to the [Authentiq Dashboard](https://dashboard.authentiq.com/?utm_source=github&utm_medium=readme&utm_campaign=authentiq-proxy-jenkins) to create a new client for you Jenkins server.
 1. Paste the `client_id` and `client_secret` into the [jenkins_access.lua](conf.d/jenkins_access.lua) file.
 1. Also change the `whitelisted_domain` variable to match your email domain.
 1. Run
